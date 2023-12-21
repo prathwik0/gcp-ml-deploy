@@ -6,6 +6,7 @@ os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 import io
 import numpy as np
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 load_dotenv()
 test = os.getenv("TEST")
@@ -37,6 +38,7 @@ model = genai.GenerativeModel("gemini-pro")
 
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route("/", methods=["POST"])
