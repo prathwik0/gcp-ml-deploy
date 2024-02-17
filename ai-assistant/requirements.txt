@@ -1,0 +1,7 @@
+Flask
+Flask-Cors
+gunicorn
+numpy
+IPython
+python-dotenv
+google-ai-generativelanguage
